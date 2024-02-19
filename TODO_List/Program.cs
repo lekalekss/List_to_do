@@ -36,9 +36,8 @@ class Program
 
             if (operationNumRes == true)
             {
-                int numb = int.Parse(operationNumber);
-
-                if (numb == 1)
+                
+                if (number == 1)
                 {
                     Console.WriteLine("");
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -51,7 +50,7 @@ class Program
                     continue;
                 }
 
-                if (numb == 2)
+                if (number == 2)
                 {
                     int counttasks = listToDo.Count;
                     if (counttasks == 0)
@@ -80,8 +79,8 @@ class Program
 
                         if (removeTask == true)
                         {
-                            int removeNumber = int.Parse(newTask);
-                            int removeNumber2 = removeNumber - 1;
+                            //int removeNumber = int.Parse(newTask);
+                            int removeNumber2 = /*removeNumber*/ result- 1;
                             listToDo[removeNumber2] = newTask;
                             listToDo.Remove(newTask);
 
@@ -96,16 +95,25 @@ class Program
                     }
                 }
 
-                if (numb == 3)
+                if (number == 3)
                 {
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Exit complited!");
                     Console.ResetColor();
+                    break;
                 }
-                break;
 
-               
+                if (number!=1 && number !=2 && number !=3)
+                {
+                    Console.WriteLine("Choose correct option");
+                }
+                               
+            }
+            else
+            {
+
+                Console.WriteLine("Choose correct option");
             }
         }
     }
